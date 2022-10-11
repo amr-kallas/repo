@@ -14,9 +14,7 @@ btn.onclick = function () {
         return repos.json();
       })
       .then((res) => {
-        console.log(res);
         res.forEach((repos) => {
-          console.log(repos.stargazers_count);
           let mainDiv = document.createElement("div");
           mainDiv.className = "main-div";
           show.appendChild(mainDiv);

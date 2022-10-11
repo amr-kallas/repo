@@ -41,6 +41,16 @@ body{
     font-size: 15px;
     font-weight: bold;
 }
+@media(max-width:600px){
+    .repo-container .form button{
+        padding: 15px 10px;
+    }
+}
+@media(max-width:550px){
+    .repo-container .form input{
+        flex-basis: 70%;
+    }
+}
 .repo-container .show{
     padding: 15px;
     background: #eee;
@@ -56,10 +66,19 @@ body{
 .repo-container .show .main-div:not(:last-child){
     margin-bottom: 10px;
 }
+.repo-container .show .info{
+    flex-basis:40%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
 .repo-container .show .text{
     padding: 10px;
     background: white;
-    font-size: 20px;
+    font-size: 18px;
+    flex-basis: 40%;
+    overflow: hidden;
+    word-break: break-word;
 }
 
 .repo-container .show .info span,
@@ -70,10 +89,13 @@ body{
     text-align: center;
     color: white;
     border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .repo-container .show .info span{
     background: var(--star-color);
-    margin-right: 10px;
+    margin-right: 85px;
 }
 .repo-container .show .info a{
     background-color: var(--a-color);
